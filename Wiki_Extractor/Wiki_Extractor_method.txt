@@ -1,0 +1,8 @@
+Wiki_Extractor method
+
+I used the function WikiExtractor.py that I found on the website :
+http://medialab.di.unipi.it/wiki/Wikipedia_Extractor
+
+I downloaded the dump file enwiki-latest-pages-articles.xml.bz2and I executed the commands :
+WikiExtractor.py -cb 250K -o extracted  enwiki -latest -pages -articles.xml.bz2
+find  extracted  -name ’*bz2’ -execbunzip2  -c {} \; > text.xml
